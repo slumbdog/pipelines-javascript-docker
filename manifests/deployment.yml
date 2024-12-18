@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: slumbdogpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: slumbdogpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: slumbdogpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: slumbdogpipelinesjavascriptdocker 
+          image: aksacrlumbro.azurecr.io/slumbdogpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
